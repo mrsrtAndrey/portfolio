@@ -1,0 +1,280 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	color: #21243D;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+.container{
+	margin: 0 10%;
+}
+.nav{
+	margin: 0 3%;
+}
+.nav ul{
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	gap: 30px;
+	list-style: none;
+	margin: 27px 60px;
+	padding: 0;
+}
+.mainMenu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+}
+.toggleNav{
+	text-decoration: none;
+  	font-size: 40px;
+  	font-weight: 300;
+  	color: #000000;
+	display: none;
+	justify-content: flex-end;
+	margin: 15px 15px;
+}
+
+.header h1{
+	font-weight: bold;
+	font-size: 44px;
+	margin: 0;
+}
+.header p{
+	margin: 40px 0;
+}
+.downResume{
+	background: #FF6464;
+	border-radius: 2px;
+	border: 0px;
+	padding: 12px 20px;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 29px;
+}
+.downResume:hover{
+	cursor: pointer;
+	position: relative;
+	transform: scale(1.05);
+	transition: 0.4s;
+}
+.header{
+	margin: 150px;
+	margin-bottom: 80px;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-gap: 120px;
+}
+
+.header .foto{
+	width: 243px;
+	height: 243px;
+	background: url(img/photo.jpg);
+	background-size: cover;
+	/*background-position: center center;*/
+	border-radius: 50%;
+}
+
+/*Вторая часть*/
+
+.wrapper{
+	background: #EDF7FA;
+	padding-bottom: 35px;
+}
+.posts{
+	margin: 30px 150px;
+	padding-top: 25px;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+}
+.heading{
+	font-size: 22px;
+}
+.posts a{
+	text-decoration: none;
+	font-size: 16px;
+	align-self: center;
+	justify-self: end;
+}
+.post span{
+	margin: 0 15px;
+	font-size: 18px;
+}
+.post{
+	background: white;
+	padding: 24px;
+}
+
+/*Третья часть*/
+.sites{
+	margin: 30px 150px;
+}
+
+.site{
+	display: grid;
+	grid-template-columns: 246px  1fr;
+	grid-gap: 20px;
+	padding: 30px 0;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.screen_site{
+	width: 100%;
+}
+.site h2{
+	margin-top:0;
+}
+.year_site{
+	padding: 0 10px;
+	background: #142850;
+	border-radius: 16px;
+	color: white;
+}
+.class_site{
+	font-size: 20px;
+	line-height: 29px;
+	color: #8695A4;
+	margin-left: 25px;
+}
+.social{
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+.social img{
+	margin: 20px;
+}
+footer{
+	text-align: center;
+	padding: 50px 0;
+}
+
+
+
+
+@media screen and (max-device-width: 1440px){
+	.header{
+		margin: 80px;
+		/*background: #F4CDD3;*/
+	}
+	.posts{
+		margin: 80px;
+	}
+	.sites{
+		margin: 30px 80px;
+	}
+}
+
+
+@media screen and (max-device-width: 1200px){
+	.container{
+		margin: 0 4%;
+	}
+	.header{
+		grid-template-columns: 1fr;
+		margin: 70px 100px;
+		grid-gap: 60px;
+		/*background: #C4CEF8;*/
+	}
+	.foto{
+		grid-row-start: 1;
+		margin: 0 auto;
+	}
+	.info p{
+		text-align: center;
+	}
+	.info{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	/*Вторая часть*/
+	.posts{
+		grid-template-columns: 1fr;
+		margin: 30px 80px;
+	}
+	.view_all{
+		display: none;
+	}
+	.posts .heading{
+		justify-self: center;
+	}
+	header h1{
+		text-align: center;
+	}
+}
+
+@media screen and (max-device-width: 768px){
+	.header{
+		margin: 50px 5px;
+		grid-gap: 60px;
+		/*background: #ECF087;*/
+	}
+	.header p{
+		margin: 30px 0;
+	}
+	.header h1{
+		font-size: 35px;
+	}
+	.toggleNav{
+		display: flex;
+	}
+	.header h1{
+		text-align: center;
+	}
+	.nav ul{
+		display: none;
+		margin: 0;
+	}
+	.nav ul.open{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/*Вторая часть*/
+	.posts{
+		margin: 30px 0;
+	}
+	/*Третья часть*/
+	.site{
+		grid-template-columns: minmax(246px, 1fr);
+	}
+	.sites{
+		margin: 30px 0px;
+	}
+	
+}
+
+@media screen and (max-device-width: 320px){
+	.header{
+		margin: 10px 0px;
+		grid-gap: 20px;
+		/*background: #84E374;*/
+	}
+	.header p{
+		margin: 20px 0;
+	}
+	.downResume{
+		background: #FF6464;
+		padding: 7px 10px;
+		font-size: 20px;
+	}
+	.header h1{
+		font-size: 18px;
+	}
+	.header .foto{
+		width: 193px;
+		height: 193px;
+	}
+	.social img{
+		margin: 10px;
+	}
+}
+
+
